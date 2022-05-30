@@ -103,7 +103,7 @@ if (isset($_COOKIE['userid'])) {
 
                     <form style="text-align: left;" class="col-12 mt-5 mt-lg-0 col-lg-6">
                         <h3 class="d-none d-lg-block">Connect Your Emails</h3>
-                        <div class="form-group d-flex flex-column flex-lg-row mt-3">
+                        <div class="form-group d-flex flex-column flex-lg-row align-items-center mt-3">
                             <input type="email" placeholder="Enter Email Address" style="height: 50px; border-color:#fff;background: #000; color: #fff; border-radius: 30px;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             <button type="submit" style="height: 50px; width: 100%; border-color:#fff; color: #fff; border-radius: 30px;" class="btn px-lg-2 mt-3 mt-lg-0 mx-lg-3" id="submitemail">verify</button>
                         </div>
