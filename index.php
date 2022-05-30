@@ -54,9 +54,9 @@ if (isset($_COOKIE['userid'])) {
                                 } ?>
                             </button>
                         </li>
-                        <li class="nav-item mt-3 px-3">
+                        <!-- <li class="nav-item mt-3 px-3">
                             <button class="btn" style="height: 50px; width:100%; border-color:#fff; color: #fff; border-radius: 30px;" type="button">connect Terra</button>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -66,8 +66,8 @@ if (isset($_COOKIE['userid'])) {
         <!-- Background image -->
         <div class="p-lg-5 text-center text-white">
             <div class="container" style="width:100%;height:100%;position: relative;">
-                <div style="width:100%;height: 500px;border-radius: 30px;">
-                    <img style="width:100%;height: 500px;border-radius: 30px;" src="./image.jpg" alt="img" />
+                <div style="width:100%;height: 400px;border-radius: 30px;">
+                    <img style="width:100%;height: 400px;border-radius: 30px;" src="./image.jpg" alt="img" />
                 </div>
                 <div class="d-flex flex-column flex-lg-row justify-content-start justify-content-lg-between align-items-start px-2 py-2 px-lg-5 py-lg-5" style="position: absolute; height: 100%; width:100%; top:0; background: rgba(0,0,0,0.4);">
                     <div style="text-align: left;" class="col-11 m-auto col-lg-6">
