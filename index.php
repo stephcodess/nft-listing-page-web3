@@ -35,9 +35,9 @@ if (isset($_COOKIE['userid'])) {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item px-3">
-                            <button class="btn" style="height: 40px; border-color:#fff; color: #fff; border-radius: 30px;" id="metamask-login" type="button">
+                    <ul class="navbar-nav d-flex flex-column flex-md-row justify-content-center ms-auto">
+                        <li class="nav-item mt-3 px-3">
+                            <button class="btn" style="width:100%;height: 50px; border-color:#fff; color: #fff; border-radius: 30px;" id="metamask-login" type="button">
                                 <?php if ($select && $select['metamask'] !== "") {
                                     echo "connected to metamask";
                                 } else {
@@ -45,8 +45,8 @@ if (isset($_COOKIE['userid'])) {
                                 } ?>
                             </button>
                         </li>
-                        <li class="nav-item px-3" id="login-phantom">
-                            <button class="btn" style="height: 40px; border-color:#fff; color: #fff; border-radius: 30px;" id="metamask-login" type="button">
+                        <li class="nav-item mt-3 px-3" id="login-phantom">
+                            <button class="btn" style="height: 50px; width:100%; border-color:#fff; color: #fff; border-radius: 30px;" id="metamask-login" type="button">
                                 <?php if ($select && $select['phantom_wallet'] !== "") {
                                     echo "connected to phantom";
                                 } else {
@@ -54,8 +54,8 @@ if (isset($_COOKIE['userid'])) {
                                 } ?>
                             </button>
                         </li>
-                        <li class="nav-item px-3">
-                            <button class="btn" style="height: 40px; border-color:#fff; color: #fff; border-radius: 30px;" type="button">connect metamask</button>
+                        <li class="nav-item mt-3 px-3">
+                            <button class="btn" style="height: 50px; width:100%; border-color:#fff; color: #fff; border-radius: 30px;" type="button">connect Terra</button>
                         </li>
                     </ul>
                 </div>
@@ -66,12 +66,12 @@ if (isset($_COOKIE['userid'])) {
         <!-- Background image -->
         <div class="p-5 text-center text-white">
             <div class="container" style="width:100%;height:100%;position: relative;">
-                <div style="width:100%;height: 400px;border-radius: 30px;">
-                    <img style="width:100%;height: 400px;border-radius: 30px;" src="./image.jpg" alt="img" />
+                <div style="width:100%;height: 500px;border-radius: 30px;">
+                    <img style="width:100%;height: 500px;border-radius: 30px;" src="./image.jpg" alt="img" />
                 </div>
-                <div class="d-flex justify-content-between align-items-start px-5 py-5" style="position: absolute; height: 100%; width:100%; top:0; background: rgba(0,0,0,0.4);">
-                    <div style="text-align: left;">
-                        <h3>Connections</h3>
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start px-5 py-5" style="position: absolute; height: 100%; width:100%; top:0; background: rgba(0,0,0,0.4);">
+                    <div style="text-align: left;" class="col-12 col-lg-6">
+                        <h3 class="d-none d-lg-block">Connections</h3>
                         <div class="mt-5">
                             <h6><b>Connected Wallets</b></h6>
 
@@ -101,8 +101,8 @@ if (isset($_COOKIE['userid'])) {
                         </div>
                     </div>
 
-                    <form style="width: 45%; text-align: left;">
-                        <h3>Connect Your Emails</h3>
+                    <form style="text-align: left;" class="col-12 mt-5 mt-lg-0 col-lg-6">
+                        <h3 class="d-none d-lg-block">Connect Your Emails</h3>
                         <div class="form-group d-flex mt-3">
                             <input type="email" placeholder="Enter Email Address" style="height: 50px; border-color:#fff;background: #000; color: #fff; border-radius: 30px;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             <button type="submit" style="height: 50px; border-color:#fff; color: #fff; border-radius: 30px;" class="btn px-5 mx-3" id="submitemail">verify</button>
@@ -137,7 +137,7 @@ if (isset($_COOKIE['userid'])) {
             <h3 class="">Available NFTS (BY COLLECTIONS) </h3>
 
         </div>
-        <div class="the-spinner text-center" class="width: 100%;">gj</div>
+        <div class="the-spinner text-center" class="width: 100%;"></div>
         <div class="d-flex justify-content-between nft-box flex-wrap">
 
         </div>
@@ -148,7 +148,7 @@ if (isset($_COOKIE['userid'])) {
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="/"> MDBootstrap.com</a>
+            <!-- <a href="/"> MDBootstrap.com</a> -->
         </div>
         <!-- Copyright -->
 
