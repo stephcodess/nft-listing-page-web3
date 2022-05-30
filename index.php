@@ -64,12 +64,12 @@ if (isset($_COOKIE['userid'])) {
 
 
         <!-- Background image -->
-        <div class="p-5 text-center text-white">
+        <div class="p-lg-5 text-center text-white">
             <div class="container" style="width:100%;height:100%;position: relative;">
                 <div style="width:100%;height: 500px;border-radius: 30px;">
                     <img style="width:100%;height: 500px;border-radius: 30px;" src="./image.jpg" alt="img" />
                 </div>
-                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start px-5 py-5" style="position: absolute; height: 100%; width:100%; top:0; background: rgba(0,0,0,0.4);">
+                <div class="d-flex flex-column flex-lg-row justify-content-start justify-content-lg-between align-items-start px-2 py-2 px-lg-5 py-lg-5" style="position: absolute; height: 100%; width:100%; top:0; background: rgba(0,0,0,0.4);">
                     <div style="text-align: left;" class="col-12 col-lg-6">
                         <h3 class="d-none d-lg-block">Connections</h3>
                         <div class="mt-5">
@@ -103,9 +103,9 @@ if (isset($_COOKIE['userid'])) {
 
                     <form style="text-align: left;" class="col-12 mt-5 mt-lg-0 col-lg-6">
                         <h3 class="d-none d-lg-block">Connect Your Emails</h3>
-                        <div class="form-group d-flex mt-3">
+                        <div class="form-group d-flex flex-column flex-lg-row mt-3">
                             <input type="email" placeholder="Enter Email Address" style="height: 50px; border-color:#fff;background: #000; color: #fff; border-radius: 30px;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <button type="submit" style="height: 50px; border-color:#fff; color: #fff; border-radius: 30px;" class="btn px-5 mx-3" id="submitemail">verify</button>
+                            <button type="submit" style="height: 50px; width: 100%; border-color:#fff; color: #fff; border-radius: 30px;" class="btn px-lg-2 mt-3 mt-lg-0 mx-lg-3" id="submitemail">verify</button>
                         </div>
                         <div class="mt-3">
                             <h6><b>Connected Emails</b></h6>
