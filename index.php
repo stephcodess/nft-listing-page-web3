@@ -70,7 +70,7 @@ if (isset($_COOKIE['userid'])) {
                     <img style="width:100%;height: 500px;border-radius: 30px;" src="./image.jpg" alt="img" />
                 </div>
                 <div class="d-flex flex-column flex-lg-row justify-content-start justify-content-lg-between align-items-start px-2 py-2 px-lg-5 py-lg-5" style="position: absolute; height: 100%; width:100%; top:0; background: rgba(0,0,0,0.4);">
-                    <div style="text-align: left;" class="col-10 m-auto col-lg-6">
+                    <div style="text-align: left;" class="col-11 m-auto col-lg-6">
                         <h3 class="d-none d-lg-block">Connections</h3>
                         <div class="mt-5">
                             <h6><b>Connected Wallets</b></h6>
@@ -101,7 +101,7 @@ if (isset($_COOKIE['userid'])) {
                         </div>
                     </div>
 
-                    <form style="text-align: left;" class="col-12 mt-5 mt-lg-0 col-lg-6">
+                    <form style="text-align: left;" class="col-11 m-auto mt-5 mt-lg-0 col-lg-6">
                         <h3 class="d-none d-lg-block">Connect Your Emails</h3>
                         <div class="form-group d-flex flex-column flex-lg-row align-items-center mt-3">
                             <input type="email" placeholder="Enter Email Address" style="height: 50px; border-color:#fff;background: #000; color: #fff; border-radius: 30px;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
