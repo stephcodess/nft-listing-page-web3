@@ -153,15 +153,6 @@ if (isset($_COOKIE['userid'])) {
         <!-- Copyright -->
 
     </footer>
-
-    <!-- <script>
-        const terra = new LCDClient({
-            URL: "https://lcd.terra.dev",
-            chainID: "phoenix-1",
-        });
-        console.log(terra);
-    </script> -->
-    <!-- Footer
     <script src="./vendors/bootstrap/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="./main.js"></script>
 </body>
