@@ -35,7 +35,7 @@ async function loginWithMetamask() {
         error: function (e) {
           swal({
             title: "Error",
-            text: e.toString(),
+            text: "An error occurred",
             icon: "error",
             button: "OK",
           });
