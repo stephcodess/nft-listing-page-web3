@@ -222,23 +222,25 @@ async function getNftMetadata(account) {
     chain: "eth",
   };
   const nfts = await Moralis.Web3.getNFTs(options);
-  nfts.map((nft) => {
-    let uri = fixURL(nft.token_uri);
-
-    fetch(uri)
-      .then((response) => response.json())
-      .then((data) => {
-        $(".nft-box").html(
-          $(".nft-box").html() +
-            `<div class="card p-2" style="background-color: #000; width: 23%; border-radius: 20px; height: 400px; border: 2px solid rgba(255,255,255,0.4);"><img class="card-img-top" style="border-radius:10px;" src="${fixURL(
-              data.image
-            )}" alt="Card image cap"><div class="card-body"><h5 class="card-title">${data.name.slice(
-              0,
-              15
-            )}</h5><p class="card-text">${data.description}</p></div></div>`
-        );
-      });
-  });
+  if (nfts) {
+    nfts.map((nft) => {
+      let uri = fixURL(nft.token_uri);
+  
+      fetch(uri)
+        .then((response) => response.json())
+        .then((data) => {
+          $(".nft-box").html(
+            $(".nft-box").html() +
+              `<div class="card p-2" style="background-color: #000; width: 23%; border-radius: 20px; height: 400px; border: 2px solid rgba(255,255,255,0.4);"><img class="card-img-top" style="border-radius:10px;" src="${fixURL(
+                data.image
+              )}" alt="Card image cap"><div class="card-body"><h5 class="card-title">${data.name.slice(
+                0,
+                15
+              )}</h5><p class="card-text">${data.description}</p></div></div>`
+          );
+        });
+    });
+  }
 }
 
 function fixURL(url) {
