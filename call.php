@@ -8,7 +8,6 @@ if (isset($_POST['metamask'])) {
         }else{
             $update = update('accounts',$_COOKIE['userid'], ['metamask'=>$_POST['metamask']]);
             if ($update){
-                setcookie('userid', $update['id'], time() + (86400 * 30), '/');
                 echo 'metamask wallet has been connected successfully';
             }
         }
@@ -19,7 +18,7 @@ if (isset($_POST['metamask'])) {
         echo "your data has been retrieved from last session";
     } else {
         $update = create('accounts', ['metamask' => $_POST['metamask']]);
-        setcookie('userid', $update['id'], time() + (86400 * 30), '/');
+        setcookie('userid', $update, time() + (86400 * 30), '/');
         if ($update) {
             echo "metamask wallet connected succesfully";
         }
@@ -47,18 +46,34 @@ if (isset($_POST['metamask'])) {
         $update = create('accounts', ['phantom_wallet' => $_POST['phantom']]);
         if ($update) {
             echo "Phantom wallet connected succesfully";
+            setcookie('userid', $update, time() + (86400 * 30), '/');
         }
     }
     }
 } else if (isset($_POST['email'])) {
+    
     if (isset($_COOKIE['userid'])){
         $exist = selectOne('accounts', ['id' => $_COOKIE['userid']]);
-        $update = update('accounts', $exist['id'], ['email' => $_POST['email']]);
-        if ($update) {
-           echo "email has been added successfully. check your mail to verify";
+        if ($exist['email'] !== NULL){
+            echo "email exists.";
+        }else{
+            $update = update('accounts',$_COOKIE['userid'], ['email'=>$_POST['email']]);
+            if ($update){
+                echo 'email has been added successfully.';
+            }
         }
     }else{
-        echo "error";
+        $exist = selectOne('accounts', ['email' => $_POST['email']]);
+        if ($exist) {
+            setcookie('userid', $exist['id'], time() + (86400 * 30), '/');
+            echo "your data has been retrieved from last session";
+        } else {
+            $update = create('accounts', ['email' => $_POST['email']]);
+            if ($update) {
+                echo "Email has been connected successfully.";
+                setcookie('userid', $update, time() + (86400 * 30), '/');
+            }
+        }
     }
 }else if(isset($_POST['delete_metamsk'])){
     $delete = update('accounts',$_COOKIE['userid'], ['metamask'=>NULL]);

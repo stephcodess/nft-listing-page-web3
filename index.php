@@ -87,14 +87,14 @@ if (isset($_COOKIE['userid'])) {
                                 <?php if ($select && $select['metamask'] !== NULL) {
                                 ?>
                                     <span>Metamask: <b>
-                                            <?php echo ($select['metamask']) ?></b><i class="btn btn-danger mx-5 bi bi-trash" onclick="deleteAction({delete_metamsk: 'delete'})" data-toggle="tooltip" data-placement="top" title="remove wallet"></i> </span>
+                                            <?php echo substr($select['metamask'], 0, 30).'...' ?></b><i class="btn btn-danger mx-5 bi bi-trash" onclick="deleteAction({delete_metamsk: 'delete'})" data-toggle="tooltip" data-placement="top" title="remove wallet"></i> </span>
                                     <hr />
                                 <?php } ?>
                                 <?php
                                 if ($select && $select['phantom_wallet'] !== NULL) {
                                 ?>
                                     <span>Phantom: <b>
-                                            <?php echo ($select['phantom_wallet']) ?></b><i class="btn btn-danger mx-5 bi bi-trash" onclick="deleteAction({delete_phantom: 'delete'})" data-toggle="tooltip" data-placement="top" title="remove wallet"></i> </span>
+                                            <?php echo (substr($select['phantom_wallet'],0, 30). '...'); ?></b><i class="btn btn-danger mx-5 bi bi-trash" onclick="deleteAction({delete_phantom: 'delete'})" data-toggle="tooltip" data-placement="top" title="remove wallet"></i> </span>
                                     <hr />
                                 <?php } ?>
                             </div>

@@ -31,6 +31,7 @@ async function loginWithMetamask() {
             icon: "success",
             button: "OK",
           });
+          window.location.reload();
         },
         error: function (e) {
           swal({
@@ -80,6 +81,7 @@ async function loginWithPhantomWallet() {
               icon: "success",
               button: "OK",
             });
+            window.location.reload();
           },
           error: function (e) {
             swal({
