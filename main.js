@@ -35,7 +35,7 @@ async function loginWithMetamask() {
         error: function (e) {
           swal({
             title: "Error",
-            text: error.toString(),
+            text: e.toString(),
             icon: "error",
             button: "OK",
           });
@@ -84,7 +84,7 @@ async function loginWithPhantomWallet() {
           error: function (e) {
             swal({
               title: "Error",
-              text: error.toString(),
+              text: e.toString(),
               icon: "error",
               button: "OK",
             });
@@ -127,7 +127,7 @@ async function deleteAction(data) {
     error: function (e) {
       swal({
         title: "Error",
-        text: error.toString(),
+        text: e.toString(),
         icon: "error",
         button: "OK",
       });
@@ -163,7 +163,7 @@ async function createEmail(e) {
       error: function (e) {
         swal({
           title: "Error",
-          text: error.toString(),
+          text: e.toString(),
           icon: "error",
           button: "OK",
         });
@@ -278,7 +278,7 @@ window.addEventListener("load", async () => {
     error: function (e) {
       swal({
         title: "Error",
-        text: error.toString(),
+        text: e.toString(),
         icon: "error",
         button: "OK",
       });
@@ -311,7 +311,7 @@ window.addEventListener("load", async () => {
     error: function (e) {
       swal({
         title: "Error",
-        text: error.toString(),
+        text: e.toString(),
         icon: "error",
         button: "OK",
       });
