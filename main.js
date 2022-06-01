@@ -183,42 +183,42 @@ async function createEmail(e) {
 
 document.getElementById("submitemail").onclick = createEmail;
 
-async function getNftMetadata(account) {
-  const options = {
-    address: account,
-    chain: "eth",
-  };
-  const nfts = await Moralis.Web3.getNFTs(options);
-  if (nfts) {
-    nfts.map((nft) => {
-      let uri = fixURL(nft.token_uri);
+// async function getNftMetadata(account) {
+//   const options = {
+//     address: account,
+//     chain: "eth",
+//   };
+//   const nfts = await Moralis.Web3.getNFTs(options);
+//   if (nfts) {
+//     nfts.map((nft) => {
+//       let uri = fixURL(nft.token_uri);
   
-      fetch(uri)
-        .then((response) => response.json())
-        .then((data) => {
-          $(".nft-box").html(
-            $(".nft-box").html() +
-              `<div class="card p-2" style="background-color: #000; width: 23%; border-radius: 20px; height: 400px; border: 2px solid rgba(255,255,255,0.4);"><img class="card-img-top" style="border-radius:10px;" src="${fixURL(
-                data.image
-              )}" alt="Card image cap"><div class="card-body"><h5 class="card-title">${data.name.slice(
-                0,
-                15
-              )}</h5><p class="card-text">${data.description}</p></div></div>`
-          );
-        });
-    });
-  }
-}
+//       fetch(uri)
+//         .then((response) => response.json())
+//         .then((data) => {
+//           $(".nft-box").html(
+//             $(".nft-box").html() +
+//               `<div class="card p-2" style="background-color: #000; width: 23%; border-radius: 20px; height: 400px; border: 2px solid rgba(255,255,255,0.4);"><img class="card-img-top" style="border-radius:10px;" src="${fixURL(
+//                 data.image
+//               )}" alt="Card image cap"><div class="card-body"><h5 class="card-title">${data.name.slice(
+//                 0,
+//                 15
+//               )}</h5><p class="card-text">${data.description}</p></div></div>`
+//           );
+//         });
+//     });
+//   }
+// }
 
-function fixURL(url) {
-  if (url.startsWith("ipfs")) {
-    return (
-      "https://ipfs.moralis.io:2053/ipfs/" + url.split("ipfs://ipfs/").slice(-1)
-    );
-  } else {
-    return url + "?format=json";
-  }
-}
+// function fixURL(url) {
+//   if (url.startsWith("ipfs")) {
+//     return (
+//       "https://ipfs.moralis.io:2053/ipfs/" + url.split("ipfs://ipfs/").slice(-1)
+//     );
+//   } else {
+//     return url + "?format=json";
+//   }
+// }
 
 // window.addEventListener("load", async () => {
 //   await $.ajax({
