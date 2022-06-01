@@ -156,16 +156,16 @@ async function createEmail(e) {
         // alert.html(data).fadeIn(); // fade in response data
 
         swal({
-          title: data == "error" ? "error" : "success",
-          text: data == "error" ? "login to a wallet." : data,
-          icon: data == "error" ? "error" : "success",
+          title: "success",
+          text: data,
+          icon: "success",
           button: "OK",
         });
       },
       error: function (e) {
         swal({
           title: "Error",
-          text: e.toString(),
+          text: "error",
           icon: "error",
           button: "OK",
         });
