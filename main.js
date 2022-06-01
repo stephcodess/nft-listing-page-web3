@@ -183,39 +183,6 @@ async function createEmail(e) {
 
 document.getElementById("submitemail").onclick = createEmail;
 
-// $(document).ready(function() {
-//     var form = $('#myForm'); // contact form
-//     var submit = $('.login');
-//     var registerBtn=$('.register-btn'); // submit button
-//     var alert = $('.alert-msg'); // alert div for show alert message
-
-//     // form submit event
-//     form.on('submit', function(e) {
-//         e.preventDefault(); // prevent default form submit
-
-//         $.ajax({
-//             url: 'log.php', // form action url
-//             type: 'POST', // form submit method get/post
-//             dataType: 'html', // request type html/json/xml
-//             data: form.serialize(), // serialize form data
-//             beforeSend: function() {
-//                 alert.fadeOut();
-//                 submit.html('creating....'); // change submit button text
-//             },
-//             success: function(data) {
-//                 alert.html(data).fadeIn(); // fade in response data
-//                 form.trigger('reset'); // reset form
-//             },
-//             error: function(e) {
-//                 console.log(e)
-//             }
-//         });
-
-//     });
-// });
-
-// NFTS
-
 async function getNftMetadata(account) {
   const options = {
     address: account,
@@ -253,75 +220,75 @@ function fixURL(url) {
   }
 }
 
-window.addEventListener("load", async () => {
-  await $.ajax({
-    url: "call.php", // form action url
-    type: "POST", // form submit method get/post
-    dataType: "html", // request type html/json/xml
-    data: {
-      accountDataMetamask: "account",
-    }, // serialize form data
-    beforeSend: function () {
-      // alert.fadeOut();
-      $(".the-spinner").html(
-        '<div class="spinner-grow" role="status"><span class="sr-only"></span></div>'
-      ); // change submit button text
-    },
-    success: function (data) {
-      // alert.html(data).fadeIn(); // fade in response data
-      if (data !== "") {
-        getNftMetadata(data);
-      }
-      // swal({
-      //   title:"success",
-      //   text:data,
-      //   icon: "success",
-      //   button: "OK",
-      // });
-    },
-    error: function (e) {
-      swal({
-        title: "Error",
-        text: e.toString(),
-        icon: "error",
-        button: "OK",
-      });
-    },
-  });
+// window.addEventListener("load", async () => {
+//   await $.ajax({
+//     url: "call.php", // form action url
+//     type: "POST", // form submit method get/post
+//     dataType: "html", // request type html/json/xml
+//     data: {
+//       accountDataMetamask: "account",
+//     }, // serialize form data
+//     beforeSend: function () {
+//       // alert.fadeOut();
+//       $(".the-spinner").html(
+//         '<div class="spinner-grow" role="status"><span class="sr-only"></span></div>'
+//       ); // change submit button text
+//     },
+//     success: function (data) {
+//       // alert.html(data).fadeIn(); // fade in response data
+//       if (data !== "") {
+//         getNftMetadata(data);
+//       }
+//       // swal({
+//       //   title:"success",
+//       //   text:data,
+//       //   icon: "success",
+//       //   button: "OK",
+//       // });
+//     },
+//     error: function (e) {
+//       swal({
+//         title: "Error",
+//         text: e.toString(),
+//         icon: "error",
+//         button: "OK",
+//       });
+//     },
+//   });
 
-  await $.ajax({
-    url: "call.php", // form action url
-    type: "POST", // form submit method get/post
-    dataType: "html", // request type html/json/xml
-    data: {
-      accountDataPhantom: "account",
-    }, // serialize form data
-    // beforeSend: function () {
-    //   // alert.fadeOut();
-    //   $('.the-spinner').html('<div class="spinner-grow" role="status"><span class="sr-only"></span></div>') // change submit button text
-    // },
-    success: function (data) {
-      // alert.html(data).fadeIn(); // fade in response data
-      if (data !== "") {
-        getNftMetadata(data);
-      }
-      // swal({
-      //   title:"success",
-      //   text:data,
-      //   icon: "success",
-      //   button: "OK",
-      // });
-    },
-    error: function (e) {
-      swal({
-        title: "Error",
-        text: e.toString(),
-        icon: "error",
-        button: "OK",
-      });
-    },
-  });
-});
+//   await $.ajax({
+//     url: "call.php", // form action url
+//     type: "POST", // form submit method get/post
+//     dataType: "html", // request type html/json/xml
+//     data: {
+//       accountDataPhantom: "account",
+//     }, // serialize form data
+//     // beforeSend: function () {
+//     //   // alert.fadeOut();
+//     //   $('.the-spinner').html('<div class="spinner-grow" role="status"><span class="sr-only"></span></div>') // change submit button text
+//     // },
+//     success: function (data) {
+//       // alert.html(data).fadeIn(); // fade in response data
+//       if (data !== "") {
+//         getNftMetadata(data);
+//       }
+//       // swal({
+//       //   title:"success",
+//       //   text:data,
+//       //   icon: "success",
+//       //   button: "OK",
+//       // });
+//     },
+//     error: function (e) {
+//       swal({
+//         title: "Error",
+//         text: e.toString(),
+//         icon: "error",
+//         button: "OK",
+//       });
+//     },
+//   });
+// });
 
 document.getElementById("metamask-login").onclick = loginWithMetamask;
 document.getElementById("login-phantom").onclick = loginWithPhantomWallet;
